@@ -1,149 +1,161 @@
-# Project Name
+# 🎯 My Goals Web - Frontend
 
-A modern web application built with React, TypeScript, and Tailwind CSS, powered by Vite for fast development and optimized builds.
+Uma aplicação web moderna e responsiva para gerenciamento de metas pessoais com sistema de gamificação integrado.
 
-## 🚀 Features
+## 📋 Sobre o Projeto
 
-- ⚡ **Fast Development** - Powered by Vite for lightning-fast HMR
-- 🎨 **Modern Styling** - Tailwind CSS for utility-first styling
-- 📱 **Responsive Design** - Mobile-first responsive layout
-- 🔧 **TypeScript** - Full type safety and better developer experience
-- ⚛️ **React 18** - Latest React features and optimizations
+O My Goals Web é a interface frontend de um sistema completo de gerenciamento de metas pessoais desenvolvido para demonstrar proficiência em tecnologias modernas do ecossistema React. A aplicação implementa padrões de desenvolvimento avançados, arquitetura escalável e experiência do usuário otimizada.
 
-## 🛠️ Technologies Used
+## 🚀 Desenvolvido durante o NLW - Rocketseat
 
-- **Frontend Framework**: React 18
-- **Language**: TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Package Manager**: npm/yarn/pnpm
+Este projeto foi desenvolvido(com pequenas mudanças) durante o Next Level Week (NLW) da Rocketseat, um evento intensivo de programação focado em tecnologias modernas. O projeto demonstra a aplicação prática de conceitos avançados de React, TypeScript e desenvolvimento frontend contemporâneo.
 
-## 📋 Prerequisites
+### 🎯 Objetivos Técnicos do Projeto
 
-Before running this project, make sure you have the following installed:
+- **Demonstrar domínio do ecossistema React moderno** com React 19 e TypeScript
+- **Implementar arquitetura escalável** com separação clara de responsabilidades
+- **Aplicar padrões de design system** usando shadcn/ui para consistência visual
+- **Integrar autenticação OAuth** com GitHub para experiência de login moderna
+- **Desenvolver sistema de gamificação** com lógica de níveis e progressão
+- **Criar interface responsiva** seguindo princípios de UX/UI contemporâneos
 
-- Node.js (version 16 or higher)
-- npm, yarn, or pnpm
+## ✨ Principais Funcionalidades
 
-## 🚀 Getting Started
+- **🔐 Autenticação com GitHub** - Login seguro e prático usando sua conta GitHub
+- **📝 Gerenciamento de Metas** - Criar e organizar metas pessoais
+- **✅ Controle de Progresso** - Marcar metas como concluídas e acompanhar o progresso
+- **📊 Barras de Progresso** - Visualização clara do andamento das metas
+- **🎮 Sistema de Gamificação** - Ganhe experiência e suba de nível conforme completa suas metas
+- **📱 Design Responsivo** - Interface otimizada para desktop e dispositivos móveis
+- **🌙 Interface Moderna** - Design limpo e intuitivo com componentes acessíveis
 
-### Installation
+## 🚀 Tecnologias Utilizadas
 
-1. Clone the repository:
+### Core
 
-```bash
-git clone <repository-url>
-cd <project-directory>
+- **React 19** - Biblioteca principal para construção da interface
+- **TypeScript** - Tipagem estática para maior segurança e produtividade
+- **Vite** - Build tool moderna e rápida
+- **React Router DOM** - Roteamento client-side
+
+### Estilização & Design System
+
+- **Tailwind CSS 4** - Framework CSS utilitário de nova geração
+- **shadcn/ui** - Sistema de componentes baseado em Radix UI com design tokens
+- **Lucide React** - Biblioteca de ícones SVG otimizados e consistentes
+
+### Gerenciamento de Estado & Dados
+
+- **TanStack Query (React Query)** - Gerenciamento de estado servidor, cache e sincronização
+- **React Hook Form** - Gerenciamento performático de formulários com validação
+- **Zod** - Validação de esquemas TypeScript-first com inferência de tipos
+- **Universal Cookie** - Gerenciamento de cookies para persistência de sessão
+
+### Ferramentas de Desenvolvimento & Build
+
+- **Biome** - Linter e formatter rápido alternativo ao ESLint/Prettier
+- **Orval** - Geração automática de clientes API TypeScript baseado em OpenAPI
+- **Vite** - Build tool moderna com HMR otimizado
+- **pnpm** - Gerenciador de pacotes eficiente com workspace support
+- **TypeScript ~5.8** - Tipagem estática avançada com as últimas features
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── assets/              # Recursos estáticos (imagens, ícones SVG)
+├── components/          # Componentes reutilizáveis da aplicação
+│   └── ui/             # Componentes do design system (shadcn/ui)
+├── http/               # Configuração de clientes HTTP e interceptors
+│   └── generated/      # Código gerado automaticamente pelo Orval
+├── lib/                # Utilitários, configurações e helpers
+├── pages/              # Páginas/rotas da aplicação
+└── utils/              # Funções utilitárias puras
 ```
 
-2. Install dependencies:
+## ⚙️ Pré-requisitos
+
+- Node.js 18+
+- pnpm (recomendado)
+
+## 🔧 Instalação e Execução
+
+1. **Clone o repositório**
 
 ```bash
-npm install
-# or
-yarn install
-# or
+git clone <url-do-repositorio>
+```
+
+2. **Instale as dependências**
+
+```bash
 pnpm install
 ```
 
-### Development
-
-Start the development server:
+3. **Configure as variáveis de ambiente**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+cp .env.example .env
+```
+
+4. **Execute o projeto em modo desenvolvimento**
+
+```bash
 pnpm dev
 ```
 
-The application will be available at `http://localhost:5173`
+A aplicação estará disponível em `http://localhost:3000`
 
-### Building for Production
+## 📦 Scripts Disponíveis
 
-Create a production build:
+- `pnpm dev` - Inicia o servidor de desenvolvimento
+- `pnpm build` - Gera o build de produção
+- `pnpm generate:orval` - Gera os clientes API baseados no OpenAPI (necessário baixar o repositorio do backend: https://github.com/CaioRafael18/my-goals-server)
+
+## 🏗️ Build para Produção
 
 ```bash
-npm run build
-# or
-yarn build
-# or
 pnpm build
 ```
 
-### Preview Production Build
+Os arquivos de produção serão gerados na pasta `dist/`
 
-Preview the production build locally:
+## 📝 Destaques Técnicos
 
-```bash
-npm run preview
-# or
-yarn preview
-# or
-pnpm preview
-```
+### 🎨 Design System com shadcn/ui
 
-## 📁 Project Structure
+- **Componentes Customizáveis**: Implementação de design system robusto baseado em Radix UI
+- **Tokens de Design**: Uso consistente de cores, espaçamentos e tipografia
+- **Responsividade**: Design responsivo para desktop e dispositivos móveis
 
-```
-├── public/                 # Static assets
-├── src/                    # Source code
-│   ├── components/         # Reusable components
-│   ├── pages/             # Page components
-│   ├── styles/            # Global styles
-│   ├── utils/             # Utility functions
-│   ├── App.tsx            # Main App component
-│   └── main.tsx           # Application entry point
-├── index.html             # HTML template
-├── package.json           # Dependencies and scripts
-├── tailwind.config.js     # Tailwind CSS configuration
-├── tsconfig.json          # TypeScript configuration
-└── vite.config.ts         # Vite configuration
-```
+### 🔧 Desenvolvimento Moderno
 
-## ⚙️ Configuration
+- **TypeScript Strict**: Configuração rigorosa para maximum type safety
+- **Geração Automática**: Clientes API gerados automaticamente com Orval
+- **Code Quality**: Linting e formatação automática com Biome
 
-### Vite Configuration
+### 🚀 Performance & Otimização
 
-The project uses a custom Vite configuration with:
+- **Caching Inteligente**: Estratégias de cache com TanStack Query
+- **Build Otimizado**: Vite para builds extremamente rápidos
 
-- React plugin for JSX support
-- Tailwind CSS integration
-- Path aliases for cleaner imports
+### 🔒 Segurança & Autenticação
 
-### Tailwind CSS
+- **OAuth 2.0**: Integração segura com GitHub
+- **Type-safe APIs**: Validação de dados com Zod
+- **Cookie Management**: Gerenciamento seguro de sessões
 
-Tailwind CSS is configured for utility-first styling with custom configurations available in `tailwind.config.js`.
+## 🔗 Links Relacionados
 
-## 🧪 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint (if configured)
-- `npm run type-check` - Run TypeScript type checking
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🐛 Issues
-
-If you encounter any issues, please report them on the [Issues](../../issues) page.
-
-## 📞 Support
-
-For support, please contact [your-email@example.com] or create an issue in the repository.
+- [Documentação do React 19](https://react.dev/)
+- [Documentação do shadcn/ui](https://ui.shadcn.com/)
+- [Documentação do Tailwind CSS](https://tailwindcss.com/)
+- [Documentação do TanStack Query](https://tanstack.com/query/)
+- [Documentação do Vite](https://vitejs.dev/)
+- [Documentação do TypeScript](https://www.typescriptlang.org/)
 
 ---
 
-Made with ❤️ using React, TypeScript, and Tailwind CSS
+**💼 Projeto desenvolvido como showcase de habilidades em desenvolvimento frontend moderno**
+
+Demonstra proficiência em: React 19, TypeScript, shadcn/ui, TanStack Query, Vite, e padrões de desenvolvimento contemporâneos.
